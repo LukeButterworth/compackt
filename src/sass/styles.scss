@@ -1,0 +1,139 @@
+:host(collate-header) {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: red;
+    height: 12vh;
+    text-align: center;
+}
+
+:host(collate-header) #container {
+    height: 100%;
+}
+
+:host(collate-header) h1 {
+    display: inline-block;
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    margin-top: 3vh;
+    margin-bottom:2vh;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+:host(collate-header) > collate-dropdown {
+    vertical-align: middle;
+}
+
+:host(collate-header.sticky) {
+    position: fixed;
+}
+
+:host(collate-header) *::slotted(collate-dropdown) {
+    display: none;
+}
+
+:host(collate-header) #menu-icon {
+    position: absolute;
+    text-align: center;
+    height: 10vh;
+    width: 10vh;
+    top: 0;
+    right: 0;
+}
+
+:host(collate-header) #menu-icon div {
+    display: block;
+    background-color: black;
+    height: 0.3em;
+    width: 2em;
+    margin: 0 auto;
+    margin-top: 0;
+    margin-bottom: 0.4em;
+
+    transition: opacity 1s;
+}
+
+:host(collate-header) #menu-icon div:first-child {
+    margin-top: 4.2vh;
+    
+    transition: transform 1s;
+}
+
+:host(collate-header) #menu-icon div:last-child {
+    padding-bottom: 0;
+
+    transition: transform 1s;
+}
+
+:host(collate-header.open) #menu-icon div {
+    position: relative;
+    opacity: 0;
+
+    transition: opacity 1s;
+}
+
+:host(collate-header.open) #menu-icon div:first-child {
+    opacity: 1;
+    transform: rotate(45deg) translate(0.5em, 0.5em);
+
+    transition: transform 1s;
+}
+
+:host(collate-header.open) #menu-icon div:last-child {
+    opacity: 1;
+    transform: rotate(-45deg) translate(0.5em, -0.5em);
+
+    transition: transform 1s;
+}
+
+:host(collate-header) slot {
+    height: 90vh;
+    width: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    
+}
+
+:host(collate-header.open) slot {
+    height: 90vh;
+    width: 80vw;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+@media only screen and (min-height: 800px) {
+    :host(collate-header) {
+        height: 10vh;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+
+    :host(collate-header) *::slotted(collate-dropdown) {
+        display: block;
+        margin-top: 1em;
+        margin-left: 3em;
+        position: relative;
+        float: right;
+    }
+
+    :host(collate-header) > #container {
+        margin-left: 5em;
+        margin-right: 3em;
+    }
+
+    :host(collate-header) h1 {
+        margin-top: 3vh;
+        float: left;
+    }
+
+    :host(collate-header) #menu-icon {
+        display: none;
+    }
+
+    
+}

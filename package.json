@@ -1,0 +1,57 @@
+{
+  "name": "compackt",
+  "version": "1.0.0",
+  "description": "An Open Source Web Component Library for Beginner Developers",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "check-types": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbraxTheClean/compackt.git"
+  },
+  "keywords": [
+    "Web",
+    "Components",
+    "Beginner",
+    "Web",
+    "Development"
+  ],
+  "author": "Luke Butterworth",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AbraxTheClean/compackt/issues"
+  },
+  "homepage": "https://github.com/AbraxTheClean/compackt#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-typescript": "^7.6.0",
+    "@types/node": "^12.7.4",
+    "@types/webpack-env": "^1.14.0",
+    "autoprefixer": "^9.6.5",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "cssnano": "^4.1.10",
+    "file-loader": "^4.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.12.0",
+    "postcss-loader": "^3.0.0",
+    "sass": "^1.23.0",
+    "sass-loader": "^8.0.0",
+    "source-map-loader": "^0.2.4",
+    "ts-loader": "^6.0.4",
+    "typescript": "^3.6.2",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.8"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.6.0",
+    "@webcomponents/webcomponentsjs": "^2.3.0",
+    "babel-plugin-transform-custom-element-classes": "^0.1.0"
+  }
+}
